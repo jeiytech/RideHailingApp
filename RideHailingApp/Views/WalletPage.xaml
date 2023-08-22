@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RideHailingApp.Views.WalletPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#FAFAFA">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout>
+                <Grid Padding="30, 50, 30, 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="0">
+                        <Label Text="My Wallet" FontSize="25" TextColor="#0F0F0F"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1">
+                        <StackLayout>
+                            <Frame CornerRadius="5" BackgroundColor="#29238A">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label TextColor="#FFFFFF" HorizontalOptions="StartAndExpand">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="Balance &#10;" FontSize="15"/>
+                                                <Span Text="NGN 15,000" FontSize="25"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Frame CornerRadius="25" Padding="20, 0, 20, 0">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Image Source="addButton" HeightRequest="10"/>
+                                            <Label Text="TopUp" FontSize="13" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#0F0F0F"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2">
+                        <StackLayout Padding="0, 43" Spacing="16">
+                            <Label Text="Recent Transfers" FontSize="15" TextColor="#0F0F0F"/>
+
+                            <StackLayout Orientation="Horizontal" Spacing="15" HeightRequest="80">
+                                <StackLayout>
+                                    <ImageButton Source="capeWoman" HeightRequest="80"/>
+                                    <Label Text="Amina" TextColor="#0F0F0F" FontSize="10.5" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <ImageButton Source="beardHead" HeightRequest="80"/>
+                                    <Label Text="Joseph" TextColor="#0F0F0F" FontSize="10.5" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                                <ImageButton Source="addImage" BackgroundColor="#FAFAFA"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="3">
+                        <Label Text="Transaction History" FontSize="15" TextColor="#0F0F0F"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+            
+            <StackLayout>
+                <ScrollView VerticalScrollBarVisibility="Never">
+                    <Grid Padding="30, 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <StackLayout Grid.Row="0">
+                            <StackLayout>
+                                <StackLayout Padding="0, 16">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="purple" HeightRequest="9" VerticalOptions="Start"/>
+                                        <Label TextColor="#0F0F0F" VerticalOptions="Start" HorizontalOptions="StartAndExpand">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Airtime Recharge &#10;" FontSize="13"/>
+                                                    <Span Text="Apr 3, 2021 11:33 AM" FontSize="12"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label Text="NGN 500" FontSize="12" VerticalTextAlignment="Center" TextColor="#D40D12"/>
+                                    </StackLayout>
+                                    <Line BackgroundColor="#0B0A26" HeightRequest="1"/>
+                                </StackLayout>
+
+                                <StackLayout Padding="0, 16">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="orange" HeightRequest="9" VerticalOptions="Start"/>
+                                        <Label TextColor="#0F0F0F" VerticalOptions="Start" HorizontalOptions="StartAndExpand">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Lagos Refuse Use Charge &#10;" FontSize="13"/>
+                                                    <Span Text="Apr 3, 2021 11:33 AM" FontSize="12"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label Text="NGN 500" FontSize="12" VerticalTextAlignment="Center" TextColor="#D40D12"/>
+                                    </StackLayout>
+                                    <Line BackgroundColor="#0B0A26" HeightRequest="1"/>
+                                </StackLayout>
+
+                                <StackLayout Padding="0, 16">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="lemon" HeightRequest="9" VerticalOptions="Start"/>
+                                        <Label TextColor="#0F0F0F" VerticalOptions="Start" HorizontalOptions="StartAndExpand">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Wallet TopUp &#10;" FontSize="13"/>
+                                                    <Span Text="Apr 3, 2021 11:33 AM" FontSize="12"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label Text="NGN 500" FontSize="12" VerticalTextAlignment="Center" TextColor="#D40D12"/>
+                                    </StackLayout>
+                                    <Line BackgroundColor="#0B0A26" HeightRequest="1"/>
+                                </StackLayout>
+
+                                <StackLayout Padding="0, 16">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="purple" HeightRequest="9" VerticalOptions="Start"/>
+                                        <Label TextColor="#0F0F0F" VerticalOptions="Start" HorizontalOptions="StartAndExpand">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Airtime Recharge &#10;" FontSize="13"/>
+                                                    <Span Text="Apr 3, 2021 11:33 AM" FontSize="12"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label Text="NGN 500" FontSize="12" VerticalTextAlignment="Center" TextColor="#D40D12"/>
+                                    </StackLayout>
+                                    <Line BackgroundColor="#0B0A26" HeightRequest="1"/>
+                                </StackLayout>
+
+                                <StackLayout Padding="0, 16">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="lemon" HeightRequest="9" VerticalOptions="Start"/>
+                                        <Label TextColor="#0F0F0F" VerticalOptions="Start" HorizontalOptions="StartAndExpand">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Wallet Topup &#10;" FontSize="13"/>
+                                                    <Span Text="Apr 3, 2021 11:33 AM" FontSize="12"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label Text="NGN 500" FontSize="12" VerticalTextAlignment="Center" TextColor="#D40D12"/>
+                                    </StackLayout>
+                                    <Line BackgroundColor="#0B0A26" HeightRequest="1"/>
+                                </StackLayout>
+
+                                <StackLayout Padding="0, 16">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="orange" HeightRequest="9" VerticalOptions="Start"/>
+                                        <Label TextColor="#0F0F0F" VerticalOptions="Start" HorizontalOptions="StartAndExpand">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Lagos Refuse Use Charge &#10;" FontSize="13"/>
+                                                    <Span Text="Apr 3, 2021 11:33 AM" FontSize="12"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label Text="NGN 500" FontSize="12" VerticalTextAlignment="Center" TextColor="#D40D12"/>
+                                    </StackLayout>
+                                    <Line BackgroundColor="#0B0A26" HeightRequest="1"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+                </ScrollView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

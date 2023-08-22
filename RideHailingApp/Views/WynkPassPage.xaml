@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RideHailingApp.Views.WynkPassPage"
+             BackgroundColor="#FAFAFA"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <Grid Padding="30, 50, 30, 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="0">
+                        <StackLayout Orientation="Horizontal" Spacing="17">
+                            <ImageButton Source="backbutton" x:Name="BackBtn" HorizontalOptions="Start" Clicked="BackBtn_Clicked"/>
+                            <Label Text="Wynk Pass" FontSize="25" TextColor="#0F0F0F" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1" Padding="0, 25, 30, 0">
+                        <StackLayout HorizontalOptions="Center">
+                            <Image Source="wynkGold" WidthRequest="120"/>
+                            <StackLayout Padding="0, 24" Spacing="4" HorizontalOptions="Center">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Current Plan:" FontSize="20" TextColor="#211E8A" VerticalTextAlignment="Center"/>
+                                    <Label Text="Wynk Gold" FontSize="25" TextColor="#0E0E24" VerticalTextAlignment="Center"/>
+                                </StackLayout>
+                                <Label Text="Expires in 14 days" FontSize="15" TextColor="#0E0E24" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2">
+                        <StackLayout Spacing="21">
+                            <Label Text="Select a Plan to purchase or renew" FontSize="15" TextColor="#0E0E24"/>
+                            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                                <StackLayout Orientation="Horizontal">
+                                    <CollectionView x:Name="MyListView" WidthRequest="550" ItemsLayout="HorizontalList" BackgroundColor="#FAFAFA" 
+                                                    SelectionMode="Single" HeightRequest="270" SelectionChanged="MyListView_SelectionChanged">
+                                        <CollectionView.ItemTemplate>
+                                            <DataTemplate>
+                                                <Frame BorderColor="#E6E6E6" CornerRadius="5" Padding="30, 0, 30, 0" WidthRequest="120" BackgroundColor="#FFFFFF">
+                                                    <StackLayout HorizontalOptions="Center">
+                                                        <StackLayout Padding="0, 25">
+                                                            <Image Source="{Binding Image}"  WidthRequest="60"/>
+                                                            <Label Text="{Binding PassName}" FontSize="15" TextColor="#0E0E24" Padding="0, 13, 0, 0" HorizontalTextAlignment="Center"/>
+                                                            <Label Text="{Binding Validity}" FontSize="10" TextColor="#0E0E24" Padding="0, 5" HorizontalTextAlignment="Center"/>
+                                                        </StackLayout>
+                                                        <Button Text="Suscribe" IsEnabled="False" BackgroundColor="#211E8A" TextColor="#FFFFFF" CornerRadius="5"/>
+                                                    </StackLayout>
+                                                </Frame>
+                                            </DataTemplate>
+                                        </CollectionView.ItemTemplate>
+                                    </CollectionView>
+                                    <!--<ViewCell>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                                    <Frame BorderColor="#E6E6E6" CornerRadius="5" BackgroundColor="#FFFFFF" WidthRequest="130">
+                                                        <StackLayout HorizontalOptions="Center" Spacing="15">
+                                                            <StackLayout Padding="0, 25">
+                                                                <Image Source="wynkPurple" WidthRequest="60"/>
+                                                                <Label Text="{Binding PassName}" FontSize="15" TextColor="#0E0E24" Padding="0, 13, 0, 0" HorizontalTextAlignment="Center"/>
+                                                                <Label Text="{Binding Validity}" FontSize="10" TextColor="#0E0E24" Padding="0, 5" HorizontalTextAlignment="Center"/>
+                                                            </StackLayout>
+                                                            <Button Text="Suscribe" BackgroundColor="#211E8A" TextColor="#FFFFFF" CornerRadius="5"/>
+                                                        </StackLayout>
+                                                    </Frame>
+                                                </StackLayout>
+                                            </ViewCell>-->
+                                           
+                                </StackLayout>
+                                
+
+                                    <!--<Frame BorderColor="#E6E6E6" CornerRadius="5" BackgroundColor="#FFFFFF" WidthRequest="130">
+                                        <StackLayout HorizontalOptions="Center" Spacing="15">
+                                            <StackLayout Padding="0, 25">
+                                                <Image Source="wynkMaverick" WidthRequest="60"/>
+                                                <Label Text="Wynk Maverick" FontSize="15" TextColor="#0E0E24" Padding="0, 13, 0, 0" HorizontalTextAlignment="Center"/>
+                                                <Label Text="Valid for 30 days" FontSize="10" TextColor="#0E0E24" Padding="0, 5" HorizontalTextAlignment="Center"/>
+                                            </StackLayout>
+                                            <Button Text="Suscribe" BackgroundColor="#211E8A" TextColor="#FFFFFF" CornerRadius="5"/>
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Frame BorderColor="#E6E6E6" CornerRadius="5" BackgroundColor="#FFFFFF" WidthRequest="130">
+                                        <StackLayout HorizontalOptions="Center" Spacing="15">
+                                            <StackLayout Padding="0, 25">
+                                                <Image Source="wynkGold" WidthRequest="60"/>
+                                                <Label Text="Wynk Gold" FontSize="15" TextColor="#0E0E24" Padding="0, 13, 0, 0" HorizontalTextAlignment="Center"/>
+                                                <Label Text="Valid for 90 days" FontSize="10" TextColor="#0E0E24" Padding="0, 5" HorizontalTextAlignment="Center"/>
+                                            </StackLayout>
+                                            <Button Text="Suscribe" BackgroundColor="#211E8A" TextColor="#FFFFFF" CornerRadius="5"/>
+                                        </StackLayout>
+                                    </Frame>-->
+
+                            </ScrollView>
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+    
+<!--
+    ListView Code
+    
+    <ListView x:Name="MyListView" ItemSelected="MyListView_ItemSelected">
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <ViewCell>
+                <Frame BorderColor="#E6E6E6" BackgroundColor="red" CornerRadius="5" HeightRequest="250" WidthRequest="130">
+                    <StackLayout HorizontalOptions="Center" Spacing="15" BackgroundColor="Green">
+                        <StackLayout Padding="0, 25" BackgroundColor="AntiqueWhite" HeightRequest="200">
+                            <Image Source="wynkPurple" WidthRequest="60"/>
+                            <Label Text="{Binding PassName}" FontSize="15" TextColor="#0E0E24" Padding="0, 13, 0, 0" HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding Validity}" FontSize="10" TextColor="#0E0E24" Padding="0, 5" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+
+                        <Button Text="Suscribe" BackgroundColor="#211E8A" TextColor="#FFFFFF" CornerRadius="5"/>
+                    </StackLayout>
+                </Frame>
+            </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+    </ListView> -->

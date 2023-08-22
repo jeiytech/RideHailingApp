@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RideHailingApp"
+             xmlns:local1="clr-namespace:RideHailingApp.Views"
+             FlyoutBehavior="Disabled"
+       Shell.TabBarTitleColor="#211E8A"
+       Shell.TabBarBackgroundColor="#FAFAFA"
+       Shell.TabBarUnselectedColor="DimGray"
+             x:Class="RideHailingApp.Views.AppShell">
+
+    <ShellItem Route="main">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
+    </ShellItem>
+
+    <ShellItem Route="SignupsuccessPage">
+        <ShellContent ContentTemplate="{DataTemplate local1:SignupSuccessPage}"/>
+    </ShellItem>
+
+    <ShellItem Route="WynkpasssuccessPage">
+        <ShellContent ContentTemplate="{DataTemplate local1:WynkpassSuccessPage}"/>
+    </ShellItem>
+
+    <ShellItem Route="chatPage">
+        <ShellContent ContentTemplate="{DataTemplate local1:ChatPage}"/>
+    </ShellItem>
+
+
+    <TabBar Route="Home">
+        <Tab Icon="homeIcon" Title="Home">
+            <ShellContent ContentTemplate="{DataTemplate local1:DriverDashboardOfflinePage }"/>
+        </Tab>
+
+        <Tab Icon="jobIcon" Title="Jobs">
+            <ShellContent ContentTemplate="{DataTemplate local1:JobsPage}"/>
+        </Tab>
+
+        <Tab Icon="dashboardIcon" Title="Dashboard">
+            <ShellContent ContentTemplate="{DataTemplate local1:DashboardPage}"/>
+        </Tab>
+
+        <Tab Icon="walletIcon" Title="Wallet">
+            <ShellContent ContentTemplate="{DataTemplate local1:WalletPage}"/>
+        </Tab>
+
+        <Tab Icon="profileIcon" Title="Profile">
+            <ShellContent ContentTemplate="{DataTemplate local1:ProfilePage}"/>
+        </Tab>
+    </TabBar>
+    
+</Shell>

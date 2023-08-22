@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+             x:Class="RideHailingApp.Views.PaymentDetailsPage"
+             xmlns:effects="clr-namespace:RideHailingApp.Effects"
+             BackgroundColor="#FFFFFF"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <StackLayout>
+                <Grid VerticalOptions="Fill" Padding="36, 0">
+
+                    <StackLayout Padding="0, 36, 0, 0" Orientation="Horizontal" Spacing="260">
+                        <ImageButton Source="backbutton.png" HeightRequest="42" WidthRequest="42" x:Name="NavbackBtn" 
+                                     Clicked="NavbackBtn_Clicked" HorizontalOptions="Start"/>
+                        <Label Text="Skip" VerticalTextAlignment="Center" FontSize="19" x:Name="SkipLbl" TextColor="#211E8A">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </Grid>
+
+                <StackLayout Spacing="348">
+                    <StackLayout Spacing="-26">
+                        <StackLayout Padding="36, 57">
+                            <Label Text="Payment Details" FontSize="30" TextColor="#0E0E24"/>
+                        </StackLayout>
+
+                        <Grid Margin="36, 0, 36, 0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <StackLayout Spacing="10">
+
+                                <StackLayout Grid.Row="0">
+                                    <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" CornerRadius="5" WidthRequest="335">
+                                        <StackLayout>
+                                            <combobox:SfComboBox x:Name="comboBox" DropDownCornerRadius="5" ShowBorder="True" BorderColor="Black"
+                                                     Watermark="Payment Method" ItemPadding="20, 0" HeightRequest="60"
+                                                  TextColor="#0E0E24" DropDownBackgroundColor="AliceBlue">
+                                                <combobox:SfComboBox.ComboBoxSource>
+                                                    <ListCollection:List x:TypeArguments="x:String">
+                                                        <x:String>Male</x:String>
+                                                        <x:String>Female</x:String>
+                                                        <x:String>Queer</x:String>
+                                                    </ListCollection:List>
+                                                </combobox:SfComboBox.ComboBoxSource>
+                                            </combobox:SfComboBox>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+
+                                <StackLayout Grid.Row="1">
+                                    <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" CornerRadius="5" WidthRequest="400">
+                                        <Entry Placeholder="Cardholder's Name" TextColor="#0E0E24" FontSize="15" HeightRequest="60" ReturnType="Next">
+                                            <Entry.Effects>
+                                                <effects:PlainEntry/>
+                                            </Entry.Effects>
+                                        </Entry>
+                                    </Frame>
+                                </StackLayout>
+
+                                <StackLayout Grid.Row="2" Orientation="Horizontal">
+                                    <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" WidthRequest="200" CornerRadius="5">
+                                            <Entry Placeholder="Card Number" TextColor="#0E0E24" FontSize="15" HeightRequest="60"  ReturnType="Next">
+                                                <Entry.Effects>
+                                                    <effects:PlainEntry/>
+                                                </Entry.Effects>
+                                            </Entry>
+                                        </Frame>
+                                    <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" CornerRadius="5" WidthRequest="120">
+                                        <Entry Placeholder="CVV" TextColor="#0E0E24" FontSize="15" HeightRequest="60" Keyboard="Numeric" ReturnType="Done">
+                                            <Entry.Effects>
+                                                <effects:PlainEntry/>
+                                            </Entry.Effects>
+                                        </Entry>
+                                    </Frame>
+                                </StackLayout>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="4" Padding="36, 0">
+                        <Button BackgroundColor="#211E8A" Text="Finish Setup" TextColor="#FFFFFF" CornerRadius="5" x:Name="FinishSetUpBtn" 
+                                 HeightRequest="60" BorderColor="#211E8A" Clicked="FinishSetUpBtn_Clicked"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

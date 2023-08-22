@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:effects="clr-namespace:RideHailingApp.Effects"
+             x:Class="RideHailingApp.Views.LoginOtpPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="#FFFFFF">
+            <StackLayout>
+                <Grid VerticalOptions="Fill">
+
+                    <StackLayout BackgroundColor="#FFFFFF" Padding="36, 36, 0, 0">
+                        <ImageButton Source="backbutton.png" HeightRequest="42" WidthRequest="42" x:Name="NavbackBtn" 
+                                       HorizontalOptions="Start" Clicked="NavbackBtn_Clicked"/>
+                    </StackLayout>
+                </Grid>
+                <StackLayout Spacing="119">
+                    <StackLayout Spacing="-26">
+                        <StackLayout Padding="36, 57">
+                            <Label Text="Login via OTP" FontSize="30" TextColor="#0E0E24"/>
+                            <Label Text="Please enter the 4-digit verification code sent to aleroo584@gmail.com" FontSize="15" TextColor="#0E0E24"/>
+                        </StackLayout>
+
+                        <Grid Margin="36, 0, 36, 0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <StackLayout Spacing="414">
+                                <StackLayout Spacing="25">
+                                    <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10" Padding="24, 0, 24, 0">
+                                        <Frame CornerRadius="5" BorderColor="Black" WidthRequest="60" HeightRequest="60">
+                                            <Entry FontFamily="Circular Std" TextColor="#0F0F0F" ReturnType="Next" Keyboard="Numeric" x:Name="FirstEntry"
+                                                   FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" MaxLength="1" Completed="FirstEntry_Completed">
+                                                <Entry.Effects>
+                                                    <effects:PlainEntry/>
+                                                </Entry.Effects>
+                                            </Entry>
+                                        </Frame>
+                                        <Frame CornerRadius="5" BorderColor="Black" WidthRequest="60" HeightRequest="60">
+                                            <Entry FontFamily="Circular Std" TextColor="#0F0F0F" ReturnType="Next" Keyboard="Numeric" x:Name="SecondEntry"
+                                                   FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" MaxLength="1" Completed="SecondEntry_Completed">
+                                                <Entry.Effects>
+                                                    <effects:PlainEntry/>
+                                                </Entry.Effects>
+                                            </Entry>
+                                        </Frame>
+                                        <Frame CornerRadius="5" BorderColor="Black" WidthRequest="60" HeightRequest="60">
+                                            <Entry FontFamily="Circular Std" TextColor="#0F0F0F" ReturnType="Next" Keyboard="Numeric" x:Name="ThirdEntry"
+                                                   FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" MaxLength="1" Completed="ThirdEntry_Completed">
+                                                <Entry.Effects>
+                                                    <effects:PlainEntry/>
+                                                </Entry.Effects>
+                                            </Entry>
+                                        </Frame>
+                                        <Frame CornerRadius="5" BorderColor="Black" WidthRequest="60" HeightRequest="60">
+                                            <Entry FontFamily="Circular Std" TextColor="#0F0F0F" ReturnType="Done"  Keyboard="Numeric" x:Name="FourthEntry"
+                                                   FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" MaxLength="1">
+                                                <Entry.Effects>
+                                                    <effects:PlainEntry/>
+                                                </Entry.Effects>
+                                            </Entry>
+                                        </Frame>
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand">
+                                        <Label HorizontalTextAlignment="Center" FontSize="15" x:Name="ResendOTPLbl">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Code expires in two minutes&#10;H"/>
+                                                    <Span Text="{Binding StopWatchHours}" TextColor="Black"/>
+                                                    <Span Text=": M" />
+                                                    <Span Text="{Binding StopWatchMinutes}" TextColor="Black"/>
+                                                    <Span Text=": S" />
+                                                    <Span Text="{Binding StopWatchSeconds}" TextColor="Black"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </StackLayout>
+
+                                </StackLayout>
+                                <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                    <Label Text="Didn't receive any code?" HorizontalTextAlignment="End" FontSize="15"/>
+                                    <Label Text="Resend OTP." TextColor="#211E8A" TextDecorations="Underline" x:Name="ResendOTPBtn" FontSize="15">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+
+                    
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

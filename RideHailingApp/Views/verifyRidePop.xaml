@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:effects="clr-namespace:RideHailingApp.Effects"
+             x:Class="RideHailingApp.Views.verifyRidePop"
+             BackgroundColor="#FAFAFA"
+             x:Name="overall"
+             Shell.NavBarIsVisible="False">
+
+    <!--You can set an animation in the xaml file or in the csharp code behind-->
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Left"
+            PositionOut="Right"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <!--You can use any elements here which are extended from Xamarin.Forms.View-->
+    <StackLayout
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" 
+        Padding="0, 20, 0, 20">
+
+        <StackLayout Padding="50, 20, 50, 20" Spacing="15">
+            <ImageButton Source="closee" HorizontalOptions="CenterAndExpand" Padding="21, 21" x:Name="CloseVerifyTripBtn"
+                         BorderWidth="1" BorderColor="#0B0A26" BackgroundColor="#FFFFFF" CornerRadius="50" Clicked="CloseVerifyTripBtn_Clicked"/>
+            <Frame CornerRadius="20" HasShadow="True" HeightRequest="240" WidthRequest="263">
+                <StackLayout VerticalOptions="Center">
+                    <Label HorizontalTextAlignment="Center" TextColor="#0F0F0F">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span FontSize="20" Text="Enter trip PIN&#10;" />
+                                <Span FontSize="13" Text="&#10;Please ask rider for his/her secure pin" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <StackLayout Padding="0, 20, 0, 0" Spacing="20">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="7" Padding="24, 0, 24, 0">
+                            <Frame CornerRadius="5" BorderColor="Black" Padding="7" WidthRequest="40" HeightRequest="45">
+                                <Entry FontFamily="Circular Std" TextColor="#0F0F0F" ReturnType="Next" Keyboard="Numeric" x:Name="FirstEntry"
+                                                   FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" MaxLength="1">
+                                    <Entry.Effects>
+                                        <effects:PlainEntry/>
+                                    </Entry.Effects>
+                                </Entry>
+                            </Frame>
+
+                            <Frame CornerRadius="5" BorderColor="Black" Padding="7" WidthRequest="40" HeightRequest="45">
+                                <Entry FontFamily="Circular Std" TextColor="#0F0F0F" ReturnType="Next" Keyboard="Numeric" x:Name="SecondEntry"
+                                                   FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" MaxLength="1">
+                                    <Entry.Effects>
+                                        <effects:PlainEntry/>
+                                    </Entry.Effects>
+                                </Entry>
+                            </Frame>
+
+                            <Frame CornerRadius="5" BorderColor="Black" Padding="7" WidthRequest="40" HeightRequest="45">
+                                <Entry FontFamily="Circular Std" TextColor="#0F0F0F" ReturnType="Next" Keyboard="Numeric" x:Name="ThirdEntry"
+                                                   FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" MaxLength="1">
+                                    <Entry.Effects>
+                                        <effects:PlainEntry/>
+                                    </Entry.Effects>
+                                </Entry>
+                            </Frame>
+
+                            <Frame CornerRadius="5" BorderColor="Black" Padding="7" WidthRequest="40" HeightRequest="45">
+                                <Entry FontFamily="Circular Std" TextColor="#0F0F0F" ReturnType="Send"  Keyboard="Numeric" x:Name="FourthEntry"
+                                                   FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" MaxLength="1">
+                                    <Entry.Effects>
+                                        <effects:PlainEntry/>
+                                    </Entry.Effects>
+                                </Entry>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+</pages:PopupPage>

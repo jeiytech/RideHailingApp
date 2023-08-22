@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+             x:Class="RideHailingApp.Views.CarDetailsPage"
+             xmlns:effects="clr-namespace:RideHailingApp.Effects"
+             BackgroundColor="#FFFFFF"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <StackLayout>
+                <Grid VerticalOptions="Fill" Padding="36, 0">
+
+                    <StackLayout Padding="0, 36, 0, 0">
+                        <ImageButton Source="backbutton.png" HeightRequest="42" WidthRequest="42" x:Name="NavbackBtn" 
+                                     Clicked="NavbackBtn_Clicked" HorizontalOptions="Start"/>
+                    </StackLayout>
+                </Grid>
+                <StackLayout Padding="36, 0" Spacing="80">
+                    <StackLayout Spacing="43">
+
+                        <StackLayout Spacing="-26">
+                            <Label Text="One more thing" FontSize="30" TextColor="#0E0E24" Padding="0, 57"/>
+                            <StackLayout>
+                                <Frame CornerRadius="5" Padding="10, 5, 10, 5" BorderColor="#211E8A">
+                                    <StackLayout>
+                                        <StackLayout Orientation="Horizontal" Spacing="90">
+                                            <Label Text="Drivers Licence" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" FontSize="15" VerticalOptions="Center"/>
+                                            <Button Text="Upload Image" VerticalOptions="Center" BorderColor="#211E8A" BorderWidth="1"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Spacing="16">
+                            <Label Text="Car Details" FontSize="15" FontFamily="Circular Std" TextColor="#0E0E24"/>
+                            <StackLayout Orientation="Horizontal">
+                                <CheckBox Color="#211E8A" VerticalOptions="Center"/>
+                                <Label Text="I don't have a car" FontSize="15" FontFamily="Circular Std" TextColor="#0E0E24" VerticalOptions="Center"/>
+                            </StackLayout>
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <StackLayout Spacing="10">
+
+                                    <StackLayout Grid.Row="0">
+                                        <StackLayout Orientation="Horizontal" Spacing="10">
+                                            <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" CornerRadius="5" WidthRequest="160">
+                                                <StackLayout>
+                                                    <combobox:SfComboBox x:Name="comboBox" DropDownCornerRadius="5" ShowBorder="True" BorderColor="Black"
+                                                     Watermark="Car Brand" ItemPadding="20, 0" HeightRequest="60"
+                                                  TextColor="#0E0E24" DropDownBackgroundColor="AliceBlue">
+                                                        <combobox:SfComboBox.ComboBoxSource>
+                                                            <ListCollection:List x:TypeArguments="x:String">
+                                                                <x:String>Male</x:String>
+                                                                <x:String>Female</x:String>
+                                                                <x:String>Queer</x:String>
+                                                            </ListCollection:List>
+                                                        </combobox:SfComboBox.ComboBoxSource>
+                                                    </combobox:SfComboBox>
+                                                </StackLayout>
+                                            </Frame>
+                                            
+                                            <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" CornerRadius="5" WidthRequest="160">
+                                                <StackLayout>
+                                                    <combobox:SfComboBox x:Name="comboBox1" DropDownCornerRadius="5" ShowBorder="True" BorderColor="Black"
+                                                     Watermark="Car Colour" ItemPadding="20, 0" HeightRequest="60"
+                                                  TextColor="#0E0E24" DropDownBackgroundColor="AliceBlue">
+                                                        <combobox:SfComboBox.ComboBoxSource>
+                                                            <ListCollection:List x:TypeArguments="x:String">
+                                                                <x:String>Male</x:String>
+                                                                <x:String>Female</x:String>
+                                                                <x:String>Queer</x:String>
+                                                            </ListCollection:List>
+                                                        </combobox:SfComboBox.ComboBoxSource>
+                                                    </combobox:SfComboBox>
+                                                </StackLayout>
+                                            </Frame>
+
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="1">
+                                        <StackLayout Orientation="Horizontal" Spacing="10">
+                                            <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" CornerRadius="5" WidthRequest="200">
+                                                <StackLayout>
+                                                    <combobox:SfComboBox x:Name="comboBox2" DropDownCornerRadius="5" ShowBorder="True" BorderColor="Black"
+                                                     Watermark="Car Model" ItemPadding="20, 0" HeightRequest="60"
+                                                  TextColor="#0E0E24" DropDownBackgroundColor="AliceBlue">
+                                                        <combobox:SfComboBox.ComboBoxSource>
+                                                            <ListCollection:List x:TypeArguments="x:String">
+                                                                <x:String>Male</x:String>
+                                                                <x:String>Female</x:String>
+                                                                <x:String>Queer</x:String>
+                                                            </ListCollection:List>
+                                                        </combobox:SfComboBox.ComboBoxSource>
+                                                    </combobox:SfComboBox>
+                                                </StackLayout>
+                                            </Frame>
+
+                                            <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" CornerRadius="5" WidthRequest="120">
+                                                <StackLayout>
+                                                    <combobox:SfComboBox x:Name="comboBox3" DropDownCornerRadius="5" ShowBorder="True" BorderColor="Black"
+                                                     Watermark="Year" ItemPadding="20, 0" HeightRequest="60"
+                                                  TextColor="#0E0E24" DropDownBackgroundColor="AliceBlue">
+                                                        <combobox:SfComboBox.ComboBoxSource>
+                                                            <ListCollection:List x:TypeArguments="x:String">
+                                                                <x:String>Male</x:String>
+                                                                <x:String>Female</x:String>
+                                                                <x:String>Queer</x:String>
+                                                            </ListCollection:List>
+                                                        </combobox:SfComboBox.ComboBoxSource>
+                                                    </combobox:SfComboBox>
+                                                </StackLayout>
+                                            </Frame>
+
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="2">
+                                        <StackLayout Orientation="Horizontal" Spacing="10">
+                                            <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" CornerRadius="5" WidthRequest="120">
+                                                <StackLayout>
+                                                    <combobox:SfComboBox x:Name="comboBox4" DropDownCornerRadius="5" ShowBorder="True" BorderColor="Black"
+                                                     Watermark="Capacity" ItemPadding="20, 0" HeightRequest="60"
+                                                  TextColor="#0E0E24" DropDownBackgroundColor="AliceBlue">
+                                                        <combobox:SfComboBox.ComboBoxSource>
+                                                            <ListCollection:List x:TypeArguments="x:String">
+                                                                <x:String>Male</x:String>
+                                                                <x:String>Female</x:String>
+                                                                <x:String>Queer</x:String>
+                                                            </ListCollection:List>
+                                                        </combobox:SfComboBox.ComboBoxSource>
+                                                    </combobox:SfComboBox>
+                                                </StackLayout>
+                                            </Frame>
+
+                                            <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" WidthRequest="200" CornerRadius="5">
+                                                <Entry Placeholder="License Plate" TextColor="#0E0E24" FontSize="15" HeightRequest="60" ReturnType="Next">
+                                                    <Entry.Effects>
+                                                        <effects:PlainEntry/>
+                                                    </Entry.Effects>
+                                                </Entry>
+                                            </Frame>
+
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="3">
+
+                                        <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" WidthRequest="200" CornerRadius="5">
+                                            <Entry Placeholder="Owner's Full Name" TextColor="#0E0E24" FontSize="15" HeightRequest="60" ReturnType="Done">
+                                                <Entry.Effects>
+                                                    <effects:PlainEntry/>
+                                                </Entry.Effects>
+                                            </Entry>
+                                        </Frame>
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Spacing="16">
+                            <Label Text="Car Images" FontSize="15" FontFamily="Circular Std" TextColor="#0E0E24"/>
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <StackLayout Spacing="10">
+
+                                    <StackLayout Grid.Row="0">
+                                        <Frame CornerRadius="5" Padding="10, 5, 10, 5" BorderColor="#211E8A">
+                                                <StackLayout>
+                                                    <StackLayout Orientation="Horizontal" Spacing="99">
+                                                        <Label Text="Car Inspection" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" FontSize="15" VerticalOptions="Center"/>
+                                                        <Button Text="Upload Image" VerticalOptions="Center" BorderColor="#211E8A" BorderWidth="1"/>
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </Frame>
+                                        </StackLayout>
+
+                                    <StackLayout Grid.Row="1">
+                                        <Frame CornerRadius="5" Padding="10, 5, 10, 5" BorderColor="#211E8A">
+                                            <StackLayout>
+                                                <StackLayout Orientation="Horizontal" Spacing="90">
+                                                    <Label Text="Vehicle Licence" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" FontSize="15" VerticalOptions="Center"/>
+                                                    <Button Text="Upload Image" VerticalOptions="Center" BorderColor="#211E8A" BorderWidth="1"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="2">
+                                        <Frame CornerRadius="5" Padding="10, 5, 10, 5" BorderColor="#211E8A">
+                                                <StackLayout>
+                                                    <StackLayout Orientation="Horizontal" Spacing="60">
+                                                        <Label Text="Vehicle Registration" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" FontSize="15" VerticalOptions="Center"/>
+                                                        <Button Text="Upload Image" VerticalOptions="Center" BorderColor="#211E8A" BorderWidth="1"/>
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </Frame>
+                                        </StackLayout>
+
+                                    <StackLayout Grid.Row="3">
+
+                                        <Frame CornerRadius="5" Padding="10, 5, 10, 5" BorderColor="#211E8A">
+                                            <StackLayout>
+                                                <StackLayout Orientation="Horizontal" Spacing="80">
+                                                    <Label Text="Insurance Image" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" FontSize="15" VerticalOptions="Center"/>
+                                                    <Button Text="Upload Image" VerticalOptions="Center" BorderColor="#211E8A" BorderWidth="1"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </Grid>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="4" Padding="0, 0, 0, 10">
+                        <Button BackgroundColor="#211E8A" Text="Continue" TextColor="#FFFFFF" CornerRadius="5" x:Name="ContinueBtn" 
+                                 HeightRequest="60" BorderColor="#211E8A" Clicked="ContinueBtn_Clicked"/>
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

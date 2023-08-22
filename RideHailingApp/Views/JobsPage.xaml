@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RideHailingApp.Views.JobsPage"
+              Shell.NavBarIsVisible="False"
+              BackgroundColor="#FAFAFA"
+            BarBackgroundColor="#0E0E24">
+    
+    <ContentPage Title="Jobs Completed">
+        <ContentPage.Content>
+
+            <StackLayout Padding="0, -10, 0, 0">
+                <Frame BackgroundColor="#0E0E24" CornerRadius="10" HeightRequest="80">
+                    <StackLayout VerticalOptions="Center" Orientation="Horizontal" Padding="0, 0, 30, 0">
+                        <Label Text="My Jobs" TextColor="#FFFFFF" FontSize="25" HorizontalOptions="StartAndExpand"/>
+
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal" Spacing="-25">
+                                <Button Text="Completed" TextColor="#0F0F0F" FontSize="13" BackgroundColor="#FFFFFF" 
+                                    WidthRequest="150" CornerRadius="20"/>
+                                <Label Text="45" TextColor="#3EA57B" FontSize="9" VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <StackLayout>
+                    <ScrollView VerticalScrollBarVisibility="Never">
+                        <StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+
+                                <StackLayout Grid.Row="0">
+                                    <StackLayout Padding="30, 33" Spacing="20">
+                                        <Label Text="April 2021" FontSize="20" TextColor="#0B0A26"/>
+
+                                        <StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label HorizontalOptions="StartAndExpand" TextColor="DimGray" CharacterSpacing="13">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="Kusenla Road, Ikate Lekki&#10;"/>
+                                                            <Span Text="Adeshewa Yusuf"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+
+                                                <Label TextColor="DimGray">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="NGN "/>
+                                                            <Span Text="2,040.00"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+                                            </StackLayout>
+
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="Apr 3, 2021 11:33 AM" TextColor="DimGray" HorizontalOptions="StartAndExpand"/>
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlank"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <Line BackgroundColor="#0B0A26" HeightRequest="1"/>
+                                        </StackLayout>
+
+                                        <StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label HorizontalOptions="StartAndExpand" TextColor="DimGray" CharacterSpacing="13">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="Kusenla Road, Ikate Lekki&#10;"/>
+                                                            <Span Text="Adeshewa Yusuf"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+
+                                                <Label TextColor="DimGray">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="NGN "/>
+                                                            <Span Text="2,040.00"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+                                            </StackLayout>
+
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="Apr 3, 2021 11:33 AM" TextColor="DimGray" HorizontalOptions="StartAndExpand"/>
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlank"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <Line BackgroundColor="#0B0A26" HeightRequest="1"/>
+                                        </StackLayout>
+
+                                        <StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label HorizontalOptions="StartAndExpand" TextColor="DimGray" CharacterSpacing="13">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="Kusenla Road, Ikate Lekki&#10;"/>
+                                                            <Span Text="Adeshewa Yusuf"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+
+                                                <Label TextColor="DimGray">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="NGN "/>
+                                                            <Span Text="2,040.00"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+                                            </StackLayout>
+
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="Apr 3, 2021 11:33 AM" TextColor="DimGray" HorizontalOptions="StartAndExpand"/>
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlank"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <Line BackgroundColor="#0B0A26" HeightRequest="1"/>
+                                        </StackLayout>
+
+                                        <StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label HorizontalOptions="StartAndExpand" TextColor="DimGray" CharacterSpacing="13">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="Kusenla Road, Ikate Lekki&#10;"/>
+                                                            <Span Text="Adeshewa Yusuf"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+
+                                                <Label TextColor="DimGray">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="NGN "/>
+                                                            <Span Text="2,040.00"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+                                            </StackLayout>
+
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="Apr 3, 2021 11:33 AM" TextColor="DimGray" HorizontalOptions="StartAndExpand"/>
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlank"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <Line BackgroundColor="#0B0A26" HeightRequest="1"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+
+                                <StackLayout Grid.Row="1">
+                                    <StackLayout Padding="30, 0" Spacing="20">
+                                        <Label Text="May 2021" FontSize="20" TextColor="#0B0A26"/>
+
+                                        <StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label HorizontalOptions="StartAndExpand" TextColor="DimGray" CharacterSpacing="13">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="Kusenla Road, Ikate Lekki&#10;"/>
+                                                            <Span Text="Adeshewa Yusuf"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+
+                                                <Label TextColor="DimGray">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="NGN "/>
+                                                            <Span Text="2,040.00"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+                                            </StackLayout>
+
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="Apr 3, 2021 11:33 AM" TextColor="DimGray" HorizontalOptions="StartAndExpand"/>
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlank"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <Line BackgroundColor="#0B0A26" HeightRequest="1"/>
+                                        </StackLayout>
+
+                                        <StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label HorizontalOptions="StartAndExpand" TextColor="DimGray" CharacterSpacing="13">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="Kusenla Road, Ikate Lekki&#10;"/>
+                                                            <Span Text="Adeshewa Yusuf"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+
+                                                <Label TextColor="DimGray">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="NGN "/>
+                                                            <Span Text="2,040.00"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+                                            </StackLayout>
+
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="Apr 3, 2021 11:33 AM" TextColor="DimGray" HorizontalOptions="StartAndExpand"/>
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlank"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <Line BackgroundColor="#0B0A26" HeightRequest="1"/>
+                                        </StackLayout>
+
+                                        <StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label HorizontalOptions="StartAndExpand" TextColor="DimGray" CharacterSpacing="13">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="Kusenla Road, Ikate Lekki&#10;"/>
+                                                            <Span Text="Adeshewa Yusuf"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+
+                                                <Label TextColor="DimGray">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="NGN "/>
+                                                            <Span Text="2,040.00"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+                                            </StackLayout>
+
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="Apr 3, 2021 11:33 AM" TextColor="DimGray" HorizontalOptions="StartAndExpand"/>
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlank"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <Line BackgroundColor="#0B0A26" HeightRequest="1"/>
+                                        </StackLayout>
+
+                                        <StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label HorizontalOptions="StartAndExpand" TextColor="DimGray" CharacterSpacing="13">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="Kusenla Road, Ikate Lekki&#10;"/>
+                                                            <Span Text="Adeshewa Yusuf"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+
+                                                <Label TextColor="DimGray">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="NGN "/>
+                                                            <Span Text="2,040.00"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+                                            </StackLayout>
+
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="Apr 3, 2021 11:33 AM" TextColor="DimGray" HorizontalOptions="StartAndExpand"/>
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlack"/>
+                                                    <Image Source="starBlank"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <Line BackgroundColor="#0B0A26" HeightRequest="1"/>
+                                        </StackLayout>
+
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="Jobs Upcoming">
+        <ContentPage.Content>
+
+            <StackLayout Padding="0, -10, 0, 0">
+                <Frame BackgroundColor="#0E0E24" CornerRadius="10" HeightRequest="80">
+                    <StackLayout VerticalOptions="Center" Orientation="Horizontal" Padding="0, 0, 30, 0">
+                        <Label Text="My Jobs" TextColor="#FFFFFF" FontSize="25" HorizontalOptions="StartAndExpand"/>
+
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal" Spacing="-25">
+                                <Button Text="Upcoming" TextColor="#0F0F0F" FontSize="13" BackgroundColor="#FFFFFF" 
+                                    WidthRequest="150" CornerRadius="20"/>
+                                <Label Text="0" TextColor="orangered" FontSize="9" VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <StackLayout>
+                    <ScrollView>
+                        <StackLayout>
+                            <Grid Padding="0, 163, 0 ,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <StackLayout Grid.Row="0">
+                                    <StackLayout HorizontalOptions="Center" Spacing="-100" Orientation="Horizontal">
+                                        <StackLayout Orientation="Horizontal" Spacing="-100">
+                                            <Image Source="Rectangle" HeightRequest="150"/>
+
+                                            <StackLayout HorizontalOptions="Center" Padding="-30, 47">
+                                                <Image Source="RecSlim" HorizontalOptions="Start" HeightRequest="10"/>
+                                                <Image Source="RecThick" HorizontalOptions="Start" HeightRequest="10"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" Spacing="-55" Padding="-20, 100, 100, 0">
+                                            <Image Source="Ellipse" HeightRequest="90"/>
+                                            <Image Source="Union1" HeightRequest="40"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+
+                                <StackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand">
+                                    <Label HorizontalOptions="StartAndExpand" CharacterSpacing="13" HorizontalTextAlignment="Center">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="Nothing to show&#10;" FontSize="18" TextColor="#0F0F0F"/>
+                                                <Span Text="When you get pre-scheduled for&#10;" FontSize="12.5"/>
+                                                <Span Text="rides you'll see them here" FontSize="12.5"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </StackLayout>
+                            </Grid>
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+</TabbedPage>

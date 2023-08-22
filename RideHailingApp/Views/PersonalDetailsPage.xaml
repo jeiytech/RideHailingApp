@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RideHailingApp.Views.PersonalDetailsPage"
+              xmlns:effects="clr-namespace:RideHailingApp.Effects"
+             BackgroundColor="#FFFFFF"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid VerticalOptions="Fill" Padding="36, 0">
+                    <StackLayout Spacing="21">
+                        <StackLayout BackgroundColor="#FFFFFF" Padding="0, 36, 0, 0" Spacing="57">
+                            <ImageButton Source="backbutton.png" HeightRequest="42" WidthRequest="42" x:Name="NavbackBtn" 
+                                     Clicked="NavbackBtn_Clicked" HorizontalOptions="Start"/>
+
+                            <Label Text="Almost there..." FontSize="30" TextColor="#0E0E24"/>
+                        </StackLayout>
+
+                        <StackLayout Spacing="208">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <StackLayout Spacing="10">
+                                    <StackLayout Grid.Row="0">
+                                        <StackLayout Orientation="Horizontal"  Spacing="8" >
+                                            <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" CornerRadius="5">
+                                                <Entry Placeholder="First Name" TextColor="#0E0E24" FontSize="15"  HeightRequest="60" 
+                                               WidthRequest="160" ReturnType="Next">
+                                                    <Entry.Effects>
+                                                        <effects:PlainEntry/>
+                                                    </Entry.Effects>
+                                                </Entry>
+                                            </Frame>
+                                            <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" CornerRadius="5">
+                                                <Entry Placeholder="Last Name" TextColor="#0E0E24" FontSize="15" HeightRequest="60" 
+                                               WidthRequest="160" ReturnType="Next">
+                                                    <Entry.Effects>
+                                                        <effects:PlainEntry/>
+                                                    </Entry.Effects>
+                                                </Entry>
+                                            </Frame>
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="1">
+                                        <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" CornerRadius="5">
+                                            <Entry Placeholder="Email address" TextColor="#0E0E24" FontSize="15" HeightRequest="60" Keyboard="Email" ReturnType="Next">
+                                                <Entry.Effects>
+                                                    <effects:PlainEntry/>
+                                                </Entry.Effects>
+                                            </Entry>
+                                        </Frame>
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="2">
+                                        <StackLayout Orientation="Horizontal" Spacing="10">
+                                            <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" WidthRequest="120" CornerRadius="5">
+                                                <StackLayout>
+                                                    <combobox:SfComboBox x:Name="comboBox" DropDownCornerRadius="5" ShowBorder="True" BorderColor="Black"
+                                                     Watermark="Gender" ItemPadding="20, 0" HeightRequest="60"
+                                                  TextColor="#0E0E24" DropDownBackgroundColor="AliceBlue">
+                                                        <combobox:SfComboBox.ComboBoxSource>
+                                                            <ListCollection:List x:TypeArguments="x:String">
+                                                                <x:String>Male</x:String>
+                                                                <x:String>Female</x:String>
+                                                                <x:String>Queer</x:String>
+                                                            </ListCollection:List>
+                                                        </combobox:SfComboBox.ComboBoxSource>
+                                                    </combobox:SfComboBox>
+                                                </StackLayout>
+                                            </Frame>
+
+                                            <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" WidthRequest="200" CornerRadius="5">
+                                                <Entry Placeholder="Phone number" TextColor="#0E0E24" FontSize="15" HeightRequest="60" Keyboard="Telephone" ReturnType="Next">
+                                                    <Entry.Effects>
+                                                        <effects:PlainEntry/>
+                                                    </Entry.Effects>
+                                                </Entry>
+                                            </Frame>
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="3">
+                                        <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" CornerRadius="5">
+                                            <Entry Placeholder="Permanent Address" TextColor="#0E0E24" FontSize="15" HeightRequest="60" ReturnType="Next">
+                                                <Entry.Effects>
+                                                    <effects:PlainEntry/>
+                                                </Entry.Effects>
+                                            </Entry>
+                                        </Frame>
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="4">
+                                        <Frame BorderColor="#211E8A" Padding="2, 2, 2, 0" CornerRadius="5">
+                                            <Entry Placeholder="Referral Code" TextColor="#0E0E24" FontSize="15" HeightRequest="60" ReturnType="Done">
+                                                <Entry.Effects>
+                                                    <effects:PlainEntry/>
+                                                </Entry.Effects>
+                                            </Entry>
+                                        </Frame>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+
+                            <StackLayout Grid.Row="5">
+                                <Button BackgroundColor="#211E8A" Text="Continue" TextColor="#FFFFFF" CornerRadius="5" x:Name="ContinueBtn" 
+                                 HeightRequest="60" BorderColor="#211E8A" Clicked="ContinueBtn_Clicked"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

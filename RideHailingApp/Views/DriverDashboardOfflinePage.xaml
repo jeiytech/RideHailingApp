@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RideHailingApp.Views.DriverDashboardOfflinePage"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:effect="clr-namespace:RideHailingApp.Effects"
+             xmlns:xct="http://xamarin.com/schemas.communitytoolkit.org/wpf"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#FFFFFF">
+    <ContentPage.Content>
+        <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackLayout Spacing="-210" x:Name="over">
+
+                    <maps:Map x:Name="map" HeightRequest="700"
+                               IsShowingUser="True" HasZoomEnabled="True" MapType="Hybrid" TrafficEnabled="True">
+                    </maps:Map>
+
+                <ScrollView VerticalScrollBarVisibility="Never">
+                    <StackLayout Spacing="3" x:Name="overall" VerticalOptions="EndAndExpand">
+                        <StackLayout Grid.Row="0">
+                            <StackLayout Spacing="185">
+                                <StackLayout Padding="30, 0" HorizontalOptions="StartAndExpand">
+                                    <Button BackgroundColor="#E54955" Text="SOS" TextColor="#FFFFFF" CornerRadius="19"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Spacing="-10" Padding="0, 0, 0, -15" x:Name="GoLine">
+                            <StackLayout Grid.Row="1">
+                                <StackLayout>
+                                    <Frame BackgroundColor="#0B0A26" Padding="0, 22, 0 , 25" CornerRadius="10">
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+                                            <Label Text="GO ONLINE" FontSize="15" TextColor="#FFFFFF">
+                                                <Label.GestureRecognizers>
+                                                    <TapGestureRecognizer x:Name="GoOnlineLbl" Tapped="GoOnlineLbl_Tapped"/>
+                                                </Label.GestureRecognizers>
+                                            </Label>
+
+                                            <Image Source="arrowDown" HeightRequest="10.5"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="2" Padding="0, 0, 0 ,0" BackgroundColor="#FFFFFF">
+                                <StackLayout>
+                                    <Frame HasShadow="False">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label HorizontalOptions="FillAndExpand">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="TODAY'S EARNING &#10;" FontSize="12" TextColor="#0F0F0F"/>
+                                                        <Span Text="43,000" TextColor="#3EA57B" FontSize="25"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+
+                                            <Button CornerRadius="19" BorderColor="#0F0F0F" BorderWidth="1.5" Text="Earnings" BackgroundColor="#FFFFFF"/>
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Frame HasShadow="False">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label HorizontalOptions="FillAndExpand">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="TODAY'S TRIPS &#10;" FontSize="12" TextColor="#0F0F0F"/>
+                                                        <Span Text="43" TextColor="#29238A" FontSize="25"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+
+                                            <Button CornerRadius="19" BorderColor="#0F0F0F" BorderWidth="1.5" Text="History" BackgroundColor="#FFFFFF"/>
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Frame HasShadow="False">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label HorizontalOptions="FillAndExpand">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="AVERAGE RATING &#10;" FontSize="12" TextColor="#0F0F0F"/>
+                                                        <Span Text="47.8" TextColor="#E8913A" FontSize="25"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+
+                                            <Button CornerRadius="19" BorderColor="#0F0F0F" BorderWidth="1.5" Text="Ratings" BackgroundColor="#FFFFFF"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Spacing="-10" Padding="0, 0, 0, -15" x:Name="findRider">
+                            <StackLayout Grid.Row="1">
+                                <StackLayout>
+                                    <Frame BackgroundColor="#29238A" Padding="0, 22, 0 , 25" CornerRadius="10">
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+                                            <Label Text="LOOKING FOR RIDER..." FontSize="15" TextColor="#FFFFFF">
+                                                <Label.GestureRecognizers>
+                                                    <TapGestureRecognizer/>
+                                                </Label.GestureRecognizers>
+                                            </Label>
+
+                                            <Image Source="loadFocus" HeightRequest="11" IsAnimationPlaying="True" 
+                                                   Aspect="AspectFill" VerticalOptions="Center"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="2" Padding="0, 0, 0 ,0" BackgroundColor="#FFFFFF">
+                                <StackLayout>
+                                    <Frame HasShadow="False">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label HorizontalOptions="FillAndExpand">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="TODAY'S EARNING &#10;" FontSize="12" TextColor="#0F0F0F"/>
+                                                        <Span Text="43,000" TextColor="#3EA57B" FontSize="25"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+
+                                            <Button CornerRadius="19" BorderColor="#0F0F0F" BorderWidth="1.5" Text="Earnings" BackgroundColor="#FFFFFF"/>
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Frame HasShadow="False">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label HorizontalOptions="FillAndExpand">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="TODAY'S TRIPS &#10;" FontSize="12" TextColor="#0F0F0F"/>
+                                                        <Span Text="43" TextColor="#29238A" FontSize="25"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+
+                                            <Button CornerRadius="19" BorderColor="#0F0F0F" BorderWidth="1.5" Text="History" BackgroundColor="#FFFFFF"/>
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Frame HasShadow="False">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label HorizontalOptions="FillAndExpand">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="AVERAGE RATING &#10;" FontSize="12" TextColor="#0F0F0F"/>
+                                                        <Span Text="47.8" TextColor="#E8913A" FontSize="25"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+
+                                            <Button CornerRadius="19" BorderColor="#0F0F0F" BorderWidth="1.5" Text="Ratings" BackgroundColor="#FFFFFF"/>
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Frame HasShadow="False">
+                                        <StackLayout HorizontalOptions="CenterAndExpand" WidthRequest="150">
+                                            <Button CornerRadius="19" BorderColor="#0F0F0F"  BorderWidth="1.5" Text="Go Offline" 
+                                                    x:Name="GoOfflineBtn" Clicked="GoOfflineBtn_Clicked" BackgroundColor="#FFFFFF"/>
+                                        </StackLayout>
+                                    </Frame>
+
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Spacing="-20" Padding="0, 0, 0, -15" x:Name="driverRequest">
+                            <StackLayout Grid.Row="1">
+                                <StackLayout Spacing="-10">
+                                    <Frame BackgroundColor="#29238A" CornerRadius="10">
+                                        <StackLayout Padding="10, 0" Spacing="25">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label HorizontalOptions="StartAndExpand">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="3 min 2.6km&#10;" FontSize="30" TextColor="#FFFFFF"/>
+                                                            <Span Text="Rider Request" FontSize="20" TextColor="#FFFFFF"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+
+                                                <StackLayout>
+                                                    <Image Source="Semiloore" HeightRequest="60"/>
+                                                    <Label Text="Semiloore" TextColor="#FFFFFF"/>
+                                                </StackLayout>
+                                            </StackLayout>
+
+                                            <StackLayout>
+                                                <Label Text="PRICE ESTIMATE" TextColor="#FFFFFF" Opacity="0.5"/>
+                                                <Label>
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="1,200 - 1,700" FontSize="30" TextColor="#FFFFFF"/>
+                                                            <Span Text="NGN" TextColor="#FFFFFF"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+                                    <Line BackgroundColor="#29238A" HeightRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="2">
+                                <StackLayout Spacing="-20">
+                                    <Frame BackgroundColor="#0B0A26" CornerRadius="20">
+                                        <StackLayout Orientation="Horizontal" Padding="10, 0" Spacing="25">
+                                            <Button Text="Accept ride" BackgroundColor="#FFFFFF" CornerRadius="25"/>
+                                            <Label Text="Decline Ride" TextColor="#FFFFFF" VerticalTextAlignment="Center">
+                                            </Label>
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Line BackgroundColor="#0B0A26" HeightRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Spacing="-20" Padding="0, 0, 0, -15" x:Name="driverArrived">
+                            <StackLayout Grid.Row="1">
+                                <StackLayout Spacing="-10">
+                                    <Frame BackgroundColor="#29238A" CornerRadius="10">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label HorizontalOptions="StartAndExpand">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="3" FontSize="30" TextColor="#FFFFFF"/>
+                                                        <Span Text="min " FontSize="30" TextColor="#FFFFFF"/>
+                                                        <Span Text="2.6" FontSize="30" TextColor="#FFFFFF"/>
+                                                        <Span Text="km&#10;" FontSize="30" TextColor="#FFFFFF"/>
+                                                        <Span Text="Waiting Time..." FontSize="20" TextColor="#FFFFFF"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+
+                                            <StackLayout>
+                                                <Image Source="Semiloore" HeightRequest="60"/>
+                                                <Label Text="Semiloore" TextColor="#FFFFFF"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+                                    <Line BackgroundColor="#29238A" HeightRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="2">
+                                <StackLayout Spacing="-20">
+                                    <Frame BackgroundColor="#0B0A26" CornerRadius="20">
+                                        <StackLayout Orientation="Horizontal" Spacing="75" HorizontalOptions="CenterAndExpand">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="arrowDown" HeightRequest="14"/>
+                                                <Image Source="arrowDown" HeightRequest="14"/>
+                                                <Image Source="arrowDown" HeightRequest="14"/>
+                                            </StackLayout>
+                                            <Label Text="START TRIP" FontSize="15" TextColor="#FFFFFF">
+                                                <Label.GestureRecognizers>
+                                                    <TapGestureRecognizer x:Name="StartTripLbl" Tapped="StartTripLbl_Tapped"/>
+                                                </Label.GestureRecognizers>
+                                            </Label>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="arrowDown" HeightRequest="14"/>
+                                                <Image Source="arrowDown" HeightRequest="14"/>
+                                                <Image Source="arrowDown" HeightRequest="14"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Line BackgroundColor="#0B0A26" HeightRequest="40"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="3">
+                                <StackLayout Spacing="-20">
+                                    <Frame BackgroundColor="#FFFFFF" CornerRadius="20" HasShadow="False">
+                                        <StackLayout Orientation="Horizontal" Padding="10, 0" Spacing="10" HorizontalOptions="CenterAndExpand">
+                                            <ImageButton Source="callBtn" x:Name="callBtn" Clicked="callBtn_Clicked" BackgroundColor="#FFFFFF"  HeightRequest="50"/>
+                                            <ImageButton Source="messageBtn" x:Name="messageBtn" Clicked="messageBtn_Clicked" BackgroundColor="#FFFFFF" HeightRequest="50"/>
+                                            <ImageButton Source="redClose" x:Name="cancelRideBtn" Clicked="cancelRideBtn_Clicked" BackgroundColor="#FFFFFF" HeightRequest="50"/>
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Line BackgroundColor="#FFFFFF" HeightRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Spacing="-20" Padding="0, 0, 0, -15" x:Name="CallingMode">
+                            <Frame CornerRadius="20" HasShadow="True">
+                                <StackLayout>
+
+                                    <Image Source="RecSlim" HeightRequest="6" BackgroundColor="#0000001A"/>
+                                    <Grid Padding="40, 33, 40, 0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <StackLayout Grid.Row="0" Padding="0, 0, 0, 30">
+                                            <StackLayout HorizontalOptions="CenterAndExpand">
+                                                <Image Source="Adeshewa" HeightRequest="80"/>
+
+                                                <StackLayout Spacing="0">
+                                                    <Label HorizontalTextAlignment="Center" Text="Semiloore" FontSize="18" TextColor="#0F0F0F"/>
+                                                    <Label HorizontalTextAlignment="Center" Text="Ringing" FontSize="12.5" Opacity="0.4" TextColor="#0F0F0F"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </StackLayout>
+
+                                        <StackLayout Grid.Row="1">
+                                            <StackLayout Spacing="10">
+                                                <ImageButton Source="EndCall" HorizontalOptions="CenterAndExpand" BackgroundColor="#FFFFFF" HeightRequest="50"
+                                                             x:Name="EndCallBtn" Clicked="EndCallBtn_Clicked"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Grid>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+                </StackLayout>
+            </Grid>
+    </ContentPage.Content>
+</ContentPage>

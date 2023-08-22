@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             x:Class="RideHailingApp.Views.CancelRidePop"
+             BackgroundColor="#FAFAFA"
+             x:Name="overall"
+             Shell.NavBarIsVisible="False">
+
+    <!--You can set an animation in the xaml file or in the csharp code behind-->
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <!--You can use any elements here which are extended from Xamarin.Forms.View-->
+    <StackLayout
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" 
+        Padding="0, 20, 0, 20">
+
+        <StackLayout Padding="50, 20, 50, 20">
+            <Frame CornerRadius="20" HasShadow="True" HeightRequest="240" WidthRequest="263">
+                <StackLayout VerticalOptions="Center">
+                    <Label HorizontalTextAlignment="Center" FontSize="15" TextColor="#0F0F0F">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Rider has exhausted &#10;" />
+                                <Span Text="his/her waiting period" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <StackLayout Padding="20, 31, 20, 0" Spacing="20">
+                        <Button Text="Continue waiting"  BackgroundColor="#E54955" TextColor="#FFFFFF" CornerRadius="24"/>
+                        <Label Text="No, cancel" HorizontalTextAlignment="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="CancelLbl" Tapped="CancelLbl_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+</pages:PopupPage>

@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:effect="clr-namespace:RideHailingApp.Effects"
+             x:Class="RideHailingApp.Views.ProfilePage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#FAFAFA">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <Frame Padding="30, 7.5, 0, 7.5" BorderColor="#211E8A" BackgroundColor="#FFFFFF" HeightRequest="50">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="My Profile" FontSize="24" TextColor="#0F0F0F" HorizontalOptions="StartAndExpand"
+                           HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                    <Label Text="Sign Out" VerticalTextAlignment="Center" FontSize="15" FontAttributes="Bold" 
+                           Padding="0, 0 ,30 ,0" TextColor="#0F0F0F">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="SignOutLbl" Tapped="SignOutLbl_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </Frame>
+
+            <StackLayout>
+                <ScrollView>
+                    <StackLayout>
+                        <Grid Padding="30, 0, 30, 0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <StackLayout Grid.Row="0" Padding="0, 30" Spacing="11">
+                                <StackLayout>
+                                    <Image Source="profileHead"/>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                        <Image Source="icon_crown"/>
+                                        <Label Text="Gold Member" TextColor="#211E8A" FontAttributes="Bold" FontSize="15"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="1">
+                                <StackLayout Spacing="10">
+                                    <Frame BorderColor="#211E8A" CornerRadius="5" Padding="2, 2, 2, 0" HeightRequest="60">
+                                        <Entry Placeholder="Sophia Williams" FontSize="15" Margin="10">
+                                            <Entry.Effects>
+                                                <effect:PlainEntry/>
+                                            </Entry.Effects>
+                                        </Entry>
+                                    </Frame>
+
+                                    <Frame BorderColor="#211E8A" CornerRadius="5" Padding="2, 2, 2, 0" HeightRequest="60">
+                                        <Entry Placeholder="Sophia.Williams@testmail.com" FontSize="15" Margin="10">
+                                            <Entry.Effects>
+                                                <effect:PlainEntry/>
+                                            </Entry.Effects>
+                                        </Entry>
+                                    </Frame>
+
+                                    <Frame BorderColor="#211E8A" CornerRadius="5" Padding="2, 2, 2, 0" HeightRequest="60">
+                                        <Entry Placeholder="+234 807 8231 415" FontSize="15" Margin="10">
+                                            <Entry.Effects>
+                                                <effect:PlainEntry/>
+                                            </Entry.Effects>
+                                        </Entry>
+                                    </Frame>
+
+                                    <Frame BorderColor="#211E8A" CornerRadius="5" HeightRequest="40">
+                                        <StackLayout Orientation="Horizontal" Spacing="0">
+                                            <Entry Placeholder="**********" FontSize="15" IsPassword="True"
+                                           WidthRequest="200" HorizontalOptions="Start">
+                                                <Entry.Effects>
+                                                    <effect:PlainEntry/>
+                                                </Entry.Effects>
+                                            </Entry>
+                                            <Button CornerRadius="50" Text="Change" HeightRequest="30"
+                                            BackgroundColor="Gray" TextColor="White" HorizontalOptions="EndAndExpand" WidthRequest="80"/>
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Frame BorderColor="#211E8A" CornerRadius="5" Padding="2, 2, 2, 0" HeightRequest="60">
+                                        <Entry Placeholder="Add National Identity Number"  FontSize="15" Margin="10" VerticalTextAlignment="Center">
+                                            <Entry.Effects>
+                                                <effect:PlainEntry/>
+                                            </Entry.Effects>
+                                        </Entry>
+                                    </Frame>
+
+                                    <Frame BorderColor="#211E8A" CornerRadius="5" HeightRequest="40">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Entry Placeholder="Bank Account" FontSize="15" IsPassword="True"
+                                           WidthRequest="200" HorizontalOptions="Start">
+                                                <Entry.Effects>
+                                                    <effect:PlainEntry/>
+                                                </Entry.Effects>
+                                            </Entry>
+                                            <Button CornerRadius="50" Text="Add Account" HorizontalOptions="EndAndExpand" HeightRequest="30"
+                                            BackgroundColor="Gray" TextColor="White" WidthRequest="120"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="2" Padding="0, 20, 0, 25">
+                                <StackLayout Spacing="20">
+                                    <StackLayout Orientation="Horizontal" Spacing="-40">
+                                        <Label Text="My Car" TextColor="#0F0F0F" FontSize="15" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer x:Name="MyCarLbl" Tapped="MyCarLbl_Tapped"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                        <Image Source="backbutton" HorizontalOptions="End" Rotation="180"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal" Spacing="-40">
+                                        <Label Text="Wynk Pass" TextColor="#0F0F0F" FontSize="15" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer x:Name="WynkPassLbl" Tapped="WynkPassLbl_Tapped"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                        <Image Source="backbutton" HorizontalOptions="End" Rotation="180"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

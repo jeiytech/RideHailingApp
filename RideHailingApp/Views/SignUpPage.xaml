@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RideHailingApp.Views.SignUpPage"
+             xmlns:effects="clr-namespace:RideHailingApp.Effects"
+             BackgroundColor="#FFFFFF"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid VerticalOptions="Fill" Padding="36, 0">
+
+                    <StackLayout BackgroundColor="#FFFFFF" Padding="0, 36, 0, 0">
+                        <ImageButton Source="backbutton.png" HeightRequest="42" WidthRequest="42" x:Name="NavbackBtn" 
+                                     Clicked="NavbackBtn_Clicked" HorizontalOptions="Start"/>
+                    </StackLayout>
+                </Grid>
+                <StackLayout Padding="36, 0" Spacing="204">
+                    <StackLayout Spacing="43">
+
+                        <StackLayout Spacing="-26">
+                            <Label Text="Let's get &#10;you started" FontSize="30" TextColor="#0E0E24" Padding="0, 57"/>
+                            <StackLayout>
+                                <Frame CornerRadius="5" Padding="2, 2, 2, 0 " BorderColor="#211E8A">
+                                    <combobox:SfComboBox x:Name="comboBox" DropDownCornerRadius="5" ShowBorder="True" BorderColor="Black"
+                                                     Watermark="Captain Type" ItemPadding="20, 0" HeightRequest="60"
+                                                  TextColor="#0E0E24" DropDownBackgroundColor="AliceBlue">
+                                        <combobox:SfComboBox.ComboBoxSource>
+                                            <ListCollection:List x:TypeArguments="x:String">
+                                                <x:String>Item 1</x:String>
+                                                <x:String>Item 2</x:String>
+                                                <x:String>Item 3</x:String>
+                                            </ListCollection:List>
+                                        </combobox:SfComboBox.ComboBoxSource>
+                                    </combobox:SfComboBox>
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Spacing="16">
+                            <Label Text="Identity Verification" FontSize="15" FontFamily="Circular Std" TextColor="#0E0E24"/>
+                            <StackLayout Spacing="10">
+                                <Frame CornerRadius="5" Padding="2, 2, 2, 0 " BorderColor="#211E8A">
+                                    <StackLayout>
+                                        <combobox:SfComboBox x:Name="comboBox1" DropDownCornerRadius="5" ShowBorder="True" BorderColor="Black"
+                                                     Watermark="ID Type" ItemPadding="20, 0" HeightRequest="60"
+                                                  TextColor="#0E0E24" DropDownBackgroundColor="AliceBlue">
+                                            <combobox:SfComboBox.ComboBoxSource>
+                                                <ListCollection:List x:TypeArguments="x:String">
+                                                    <x:String>Item 1</x:String>
+                                                    <x:String>Item 2</x:String>
+                                                    <x:String>Item 3</x:String>
+                                                </ListCollection:List>
+                                            </combobox:SfComboBox.ComboBoxSource>
+                                        </combobox:SfComboBox>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame CornerRadius="5" Padding="2, 2, 2, 0" BorderColor="#211E8A">
+                                    <Entry HeightRequest="60" Placeholder="ID Number" Keyboard="Numeric" ReturnType="Done">
+                                        <Entry.Effects>
+                                            <effects:PlainEntry/>
+                                        </Entry.Effects>
+                                    </Entry>
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout Spacing="23">
+                        <Button BackgroundColor="#211E8A" Text="Continue" TextColor="#FFFFFF" CornerRadius="5" x:Name="ContinueBtn" 
+                                Clicked="ContinueBtn_Clicked" HeightRequest="60"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                            <Label Text="Already a user?"/>
+                            <Label Text="Login." TextColor="#211E8A" TextDecorations="Underline" FontSize="15" x:Name="LoginBtn">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

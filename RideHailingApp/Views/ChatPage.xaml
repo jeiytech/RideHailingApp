@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:effect="clr-namespace:RideHailingApp.Effects"
+             x:Class="RideHailingApp.Views.ChatPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#F4F5F9">
+    <ContentPage.Content>
+        <Grid Padding="0, 0, 0, 10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0"  BackgroundColor="AliceBlue">
+                <Image Source="RecSlim" HeightRequest="8" BackgroundColor="#0E0E24"/>
+                <StackLayout Orientation="Horizontal" Padding="10, 0, 10, 10">
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="Adesewa" HeightRequest="50"/>
+                        <Label Text="Shaymie" VerticalTextAlignment="Center" FontSize="20" TextColor="#211E8A"/>
+                    </StackLayout>
+                    <ImageButton Source="Close" x:Name="CloseMessage" Clicked="CloseMessage_Clicked"
+                                 HorizontalOptions="EndAndExpand"  BackgroundColor="#0000001A" HeightRequest="42"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" VerticalOptions="FillAndExpand" x:Name="ChatLayout">
+                    <ScrollView x:Name="MainScrollView" VerticalScrollBarVisibility="Never">
+                        <StackLayout x:Name="ChatStackLayout" Padding="10,5,10,5">
+                            <!-- Add your chat messages here -->
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+
+            <StackLayout Grid.Row="2" Margin="10, 0, 10, 15" BackgroundColor="#F4F5F9" VerticalOptions="EndAndExpand">
+                <StackLayout Orientation="Horizontal" Spacing="6">
+                    <ImageButton Source="sendBtn" Clicked="ImageButton_Clicked_1"  HeightRequest="40" Rotation="180" />
+                    <Frame BorderColor="#F4F5F9" CornerRadius="10" Padding="0, -10, 0, -10" HeightRequest="70" HorizontalOptions="FillAndExpand">
+                        <Editor Placeholder="Type your message here" TextColor="#0F0F0F"  Margin="10, 0, 10, 0"  VerticalOptions="CenterAndExpand"
+                               x:Name="NewMessageEntry" Keyboard="Chat">
+                            <Editor.Effects>
+                                <effect:PlainEntry />
+                            </Editor.Effects>
+                        </Editor>
+                    </Frame>
+                    <ImageButton Source="sendBtn" Clicked="ImageButton_Clicked" HeightRequest="40" />
+                </StackLayout>
+            </StackLayout>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

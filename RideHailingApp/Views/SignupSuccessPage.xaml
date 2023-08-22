@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RideHailingApp.Views.SignupSuccessPage"
+             BackgroundColor="#FFFFFF"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <Grid Padding="36, 173">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Spacing="379">
+                        <StackLayout Spacing="33">
+                            <StackLayout Grid.Row="0">
+                                <Image Source="Mark_icon"/>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="1">
+                                <Label Text="Congratulations! &#10; Your Wynk account has been &#10; created successfully." 
+                               FontSize="20" HorizontalTextAlignment="Center" TextColor="#0F0F0F"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="2">
+                            <Button BackgroundColor="#211E8A" Text="Take me to Login" TextColor="#FFFFFF" CornerRadius="5" x:Name="TakeToLoginBtn" 
+                                 HeightRequest="60" BorderColor="#211E8A" Clicked="TakeToLoginBtn_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

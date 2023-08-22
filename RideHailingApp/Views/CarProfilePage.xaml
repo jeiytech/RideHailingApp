@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:effect="clr-namespace:RideHailingApp.Effects"
+             x:Class="RideHailingApp.Views.CarProfilePage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#FAFAFA">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <Grid Padding="30, 50">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="0">
+                        <StackLayout Orientation="Horizontal" Spacing="17">
+                            <ImageButton Source="backbutton" x:Name="BackBtn" HorizontalOptions="Start" Clicked="BackBtn_Clicked"/>
+                            <Label Text="My Car" FontSize="25" TextColor="#0F0F0F" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1">
+                        <StackLayout HorizontalOptions="CenterAndExpand">
+                            <Image Source="carHead"/>
+                            <Label Text="Toyota Camry 2018" TextColor="#211E8A" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2" Padding="0, 20">
+                        <StackLayout Spacing="10">
+                            <Frame BorderColor="#211E8A" CornerRadius="5" HeightRequest="40">
+                                <StackLayout Orientation="Horizontal" Spacing="-10">
+                                    <Entry Placeholder="**********" FontSize="18" WidthRequest="200" HorizontalOptions="Start">
+                                        <Entry.Effects>
+                                            <effect:PlainEntry/>
+                                        </Entry.Effects>
+                                    </Entry>
+                                    <Button CornerRadius="50" Text="Plate Number" TextColor="#0F0F0F" HorizontalOptions="EndAndExpand" HeightRequest="30"
+                                            BackgroundColor="#0F0F0F6A"  />
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BorderColor="#211E8A" CornerRadius="5" HeightRequest="40">
+                                <StackLayout Orientation="Horizontal" Spacing="30">
+                                    <Entry Placeholder="Navy Blue" FontSize="18" WidthRequest="200" HorizontalOptions="Start">
+                                        <Entry.Effects>
+                                            <effect:PlainEntry/>
+                                        </Entry.Effects>
+                                    </Entry>
+                                    <Button CornerRadius="50" Text="Color" TextColor="#0F0F0F" HorizontalOptions="EndAndExpand" HeightRequest="30"
+                                            BackgroundColor="#0F0F0F6A"  />
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BorderColor="#211E8A" CornerRadius="5" HeightRequest="40">
+                                <StackLayout Orientation="Horizontal" Spacing="30">
+                                    <Entry Placeholder="Toyota Camry 2018" FontSize="18" WidthRequest="200" HorizontalOptions="Start">
+                                        <Entry.Effects>
+                                            <effect:PlainEntry/>
+                                        </Entry.Effects>
+                                    </Entry>
+                                    <Button CornerRadius="50" Text="Make" TextColor="#0F0F0F" HorizontalOptions="EndAndExpand" HeightRequest="30"
+                                            BackgroundColor="#0F0F0F6A"  />
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="3" Padding="0, 36">
+                        <ScrollView HorizontalScrollBarVisibility="Never" Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="carFullView" WidthRequest="150"/>
+                                <Image Source="carRearView" WidthRequest="150"/>
+                                <Image Source="carInnerView" WidthRequest="150"/>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="4" Padding="0, 36">
+                        <StackLayout>
+                            <Button CornerRadius="50" Text ="Update Car Details" TextColor="#0F0F0F"
+                                     BackgroundColor="#0F0F0F6A"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
